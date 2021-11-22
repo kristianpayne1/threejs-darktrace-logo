@@ -41,9 +41,7 @@ greySphereMesh2.scale.set(0.6, 0.6, 0.3)
 greySphereMesh2.position.set(0.1, -1, 0)
 greySphereMesh3.scale.set(0.35, 0.35, 0.25)
 greySphereMesh3.position.set(-1, 1, 0)
-logo.add(greySphereMesh1)
-logo.add(greySphereMesh2)
-logo.add(greySphereMesh3)
+logo.add(greySphereMesh1, greySphereMesh2, greySphereMesh3)
 
 // Rings
 const torusGeometry = new THREE.TorusGeometry( 0.65, 0.05, 32, 32 );
@@ -60,10 +58,7 @@ torus1.rotateZ(Math.PI * 0.725)
 torus2.position.set(...greySphereMesh2.position)
 torus3.position.set(...greySphereMesh3.position)
 torus4.position.set(...greySphereMesh1.position)
-logo.add( torus1 );
-logo.add( torus2 )
-logo.add( torus3 )
-logo.add( torus4 )
+logo.add( torus1, torus2, torus3, torus4 );
 
 // Connectors
 const cylinderGeometry = new THREE.CylinderGeometry( 0.05, 0.05, 1, 32 );
@@ -80,9 +75,7 @@ connector2.scale.set(1, 0.2, 1)
 connector3.position.set(...new Vector3(0.65, 0.85, 0))
 connector3.rotation.z = Math.PI * 0.7
 connector3.scale.set(1, 0.8, 1)
-logo.add( connector1 );
-logo.add( connector2 );
-logo.add( connector3 );
+logo.add( connector1, connector2, connector3 );
 
 scene.add(logo);
 
